@@ -5,21 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rede de Apoio Seguro - Muhaivire</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#7a4a9e">
 <style>
 :root{--roxo-claro:#e8d5f2;--roxo-medio:#b185c8;--roxo-escuro:#7a4a9e;--rosa-bebe:#ffd6e8;--rosa-claro:#fff0f6}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:var(--rosa-claro);color:#4a2c5a}
 .capa{width:100%;height:300px;background: linear-gradient(rgba(122,74,158,0.45), rgba(255,214,232,0.6)), url('IMG_9467.jpeg');background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;flex-direction:column;color:white;text-align:center;text-shadow:0 2px 15px rgba(0,0,0,0.4)}
 .capa h1{font-size:30px;font-weight:700}
-.capa h2{font-size:14px;margin-top:10px;background:rgba(255,255,255,0.93);color:#7a4a9e;padding:8px 20px;border-radius:25px;font-weight:400}
+.capa h2{font-size:14px;margin-top:10px;background:rgba(255,255,255,0.93);color:#7a4a9e;padding:8px 20px;border-radius:25px}
 .container{max-width:500px;margin:-25px auto 20px;padding:0 15px;position:relative;z-index:2}
 .card{background:white;margin:14px 0;padding:20px;border-radius:20px;box-shadow:0 8px 25px rgba(122,74,158,0.12);border:1px solid #ffd6e8}
 .card h3{color:#7a4a9e;margin-bottom:10px;font-size:16px}
 .btn{border:none;padding:14px;border-radius:30px;width:100%;font-weight:600;cursor:pointer}
 .btn-roxo{background:linear-gradient(135deg,#b185c8,#7a4a9e);color:white}
-.btn-whats{background:#25D366;color:white}
 .anonimo{background:linear-gradient(135deg,#f3e5f5,#fce4ec);padding:12px;border-radius:15px;font-size:12px;border-left:4px solid #b185c8}
 select,input,textarea{width:100%;padding:13px;margin:7px 0;border-radius:15px;border:1.5px solid #e8d5f2;font-family:'Poppins';background:#fefcff;font-size:14px}
 .voluntaria-card{border:1.5px solid #e8d5f2;padding:14px;margin:10px 0;border-radius:15px;background:linear-gradient(135deg,#fefcff,#fff0f6)}
@@ -35,17 +32,6 @@ footer{text-align:center;padding:20px;font-size:11px;color:#b185c8}
 </div>
 
 <div class="container">
-
-<div class="card" style="background:#7a4a9e;color:white;text-align:center">
-<h3 style="color:white">📱 Sem megas? Fala direto no WhatsApp</h3>
-<p style="font-size:12px;margin:6px 0;opacity:0.9">Não precisa abrir o site, clica e pede ajuda</p>
-<a href="https://wa.me/258850730250?text=AJUDA%20Preciso%20de%20apoio%20em%20Muhaivire%20Nampula" style="background:#25D366;color:white;padding:13px;display:block;border-radius:30px;text-decoration:none;font-weight:700;margin:8px 0">💬 WHATSAPP CHARMILA - AJUDA AGORA</a>
-<a href="https://wa.me/258879828626?text=AJUDA%20Preciso%20de%20apoio%20em%20Muhaivire" style="background:white;color:#7a4a9e;padding:11px;display:block;border-radius:30px;text-decoration:none;font-weight:600;font-size:13px">💬 Voluntária +258 87 982 8626</a>
-</div>
-
-<div style="text-align:center">
-<button onclick="modoLeve()" style="background:#e8d5f2;border:none;padding:9px 16px;border-radius:20px;color:#7a4a9e;font-size:11px">⚡ Modo Ultra-Leve (0 megas - sem fotos)</button>
-</div>
 
 <div class="card anonimo">🔒 <b>Modo Seguro:</b> Toque 3x em qualquer lugar para sair rápido para Google.</div>
 
@@ -72,8 +58,8 @@ footer{text-align:center;padding:20px;font-size:11px;color:#b185c8}
 <div class="card" style="background:linear-gradient(135deg,#e8d5f2,#ffd6e8)">
 <h3>🤝 Quero ser Anjo - fazer parte da comunidade</h3>
 <input type="text" id="nomeVol" placeholder="Teu nome completo">
-<input type="tel" id="telVol" placeholder="Teu WhatsApp obrigatório ex: +25884...">
-<input type="text" id="bairroVol" placeholder="Teu bairro ex: Muhaivire">
+<input type="tel" id="telVol" placeholder="Teu WhatsApp - ex: +25884...">
+<input type="text" id="bairroVol" placeholder="Teu bairro - ex: Muhaivire">
 <select id="skillVol">
 <option>Apoio Comunitário</option>
 <option>Apoio Jurídico</option>
@@ -82,13 +68,12 @@ footer{text-align:center;padding:20px;font-size:11px;color:#b185c8}
 <option>Acompanhamento Hospital/Esquadra</option>
 </select>
 <button class="btn" style="background:white;color:#7a4a9e" onclick="cadastrarAnjo()">💜 Cadastrar-me como Anjo</button>
-<small style="display:block;margin-top:8px;font-size:11px">Após cadastro, a Charmila vai aprovar no painel.</small>
 </div>
 
 <div class="card" id="painelAdmin" style="display:none;border:2px dashed #7a4a9e">
-<h3>🔐 Painel da Charmila - Aprovar Anjos</h3>
-<p style="font-size:12px">Link secreto:?admin=charmila</p>
-<div id="listaPendentes" style="margin:10px 0"></div>
+<h3>🔐 Painel da Charmila - Confirmar Anjos</h3>
+<p style="font-size:11px;color:#b185c8">Acesso secreto:?admin=charmila</p>
+<div id="listaPendentes" style="margin:12px 0"></div>
 <button class="btn btn-roxo" onclick="verPendentes()">Ver pedidos pendentes</button>
 <button class="btn" style="background:#e8d5f2;color:#7a4a9e;margin-top:8px" onclick="verAprovados()">Ver todos Anjos aprovados</button>
 </div>
@@ -98,21 +83,19 @@ footer{text-align:center;padding:20px;font-size:11px;color:#b185c8}
 <footer>Rede de Apoio Seguro • Nampula - Muhaivire<br>Criado por Charmila Elija 💜</footer>
 
 <script>
-// DADOS
 let ajudantes = JSON.parse(localStorage.getItem('anjosAprovados')) || [
 {nome:"Charmila Elija", bairro:"Nampula - Muhaivire", tel:"+258850730250", skill:"Coordenação e Apoio Jurídico", dist:"0.5"},
-{nome:"Voluntária Muhaivire", bairro:"Nampula - Muhaivire", tel:"+258879828626", skill:"Apoio Comunitário e Acompanhamento", dist:"0.8"}
+{nome:"Voluntária Muhaivire", bairro:"Nampula - Muhaivire", tel:"+258861568130", skill:"Apoio Comunitário", dist:"0.8"}
 ];
 let pendentes = JSON.parse(localStorage.getItem('anjosPendentes')) || [];
 
 function pedirAjuda(){
 let bairro=document.getElementById('bairro').value;
 let tipo=document.getElementById('tipoViolencia').value;
-if(!bairro){alert("Coloca teu bairro em Muhaivire 💜");return;}
+if(!bairro){alert("Coloca teu bairro 💜");return;}
 document.getElementById('resultado').style.display='block';
-let todos = [...ajudantes];
 let html="";
-todos.forEach(a=>{
+ajudantes.forEach(a=>{
 html+=`<div class="voluntaria-card"><b>${a.nome}</b> <span class="badge">${a.dist}km</span><br><small>📍 ${a.bairro} • ${a.skill}</small><br><a href="https://wa.me/${a.tel.replace(/[^0-9]/g,'')}?text=Olá%20preciso%20de%20${tipo}%20em%20${bairro}" style="background:linear-gradient(135deg,#7a4a9e,#b185c8);color:white;padding:9px 15px;border-radius:20px;text-decoration:none;display:inline-block;margin-top:8px;font-size:13px">💬 WhatsApp Seguro</a></div>`;
 });
 document.getElementById('listaAjudantes').innerHTML=html;
@@ -127,30 +110,44 @@ if(!nome ||!tel){alert("Nome e número são obrigatórios 💜");return;}
 let novo={nome,tel,bairro,skill,dist:(Math.random()*2).toFixed(1),data:new Date().toLocaleDateString()};
 pendentes.push(novo);
 localStorage.setItem('anjosPendentes', JSON.stringify(pendentes));
-let msg=`Novo Anjo quer entrar na rede:%0A Nome: ${nome}%0A Tel: ${tel}%0A Bairro: ${bairro}%0A Skill: ${skill}`;
-window.open(`https://wa.me/258850730250?text=${msg}`, '_blank');
-alert("Obrigada "+nome+"! Cadastro enviado para Charmila aprovar 💜");
-document.getElementById('nomeVol').value="";document.getElementById('telVol').value="";
+alert("Obrigada "+nome+"! Teu pedido foi enviado para a Charmila aprovar 💜");
+document.getElementById('nomeVol').value="";document.getElementById('telVol').value="";document.getElementById('bairroVol').value="";
+verPendentes();
 }
 
-if(window.location.search.includes('admin=charmila')){document.getElementById('painelAdmin').style.display='block'; verPendentes();}
+if(window.location.search.includes('admin=charmila')){
+document.getElementById('painelAdmin').style.display='block';
+verPendentes();
+}
 
 function verPendentes(){
-let html=""; if(pendentes.length==0) html="<small>Nenhum pedido pendente</small>";
-pendentes.forEach((p,i)=>{html+=`<div class="voluntaria-card"><b>${p.nome}</b> - ${p.tel}<br><small>${p.bairro} • ${p.skill}</small><br><button onclick="aprovar(${i})" style="background:#7a4a9e;color:white;border:none;padding:8px 15px;border-radius:20px;margin-top:5px">✅ Aprovar</button> <button onclick="rejeitar(${i})" style="background:#ff6b6b;color:white;border:none;padding:8px 15px;border-radius:20px">❌ Rejeitar</button></div>`});
+let html=""; if(pendentes.length==0) html="<small>Nenhum pedido pendente no momento</small>";
+pendentes.forEach((p,i)=>{
+html+=`<div class="voluntaria-card"><b>${p.nome}</b><br><small>${p.tel} • ${p.bairro} • ${p.skill}</small><br><button onclick="aprovar(${i})" style="background:#7a4a9e;color:white;border:none;padding:8px 15px;border-radius:20px;margin-top:6px">✅ Confirmar e Cadastrar</button> <button onclick="rejeitar(${i})" style="background:#ff6b6b;color:white;border:none;padding:8px 15px;border-radius:20px">❌ Rejeitar</button></div>`;
+});
 document.getElementById('listaPendentes').innerHTML=html;
 }
 function verAprovados(){
-let html="<b>Anjos aprovados:</b><br>";
-ajudantes.forEach(a=>{html+=`<small>• ${a.nome} - ${a.tel} - ${a.bairro}</small><br>`});
+let html="<b>Anjos já cadastrados:</b><br><br>";
+ajudantes.forEach(a=>{html+=`<small>• ${a.nome} - ${a.tel} - ${a.bairro} - ${a.skill}</small><br>`});
 document.getElementById('listaPendentes').innerHTML=html;
 }
-function aprovar(i){let a=pendentes.splice(i,1)[0];ajudantes.push(a);localStorage.setItem('anjosAprovados',JSON.stringify(ajudantes));localStorage.setItem('anjosPendentes',JSON.stringify(pendentes));verPendentes();alert(a.nome+" aprovado!");}
-function rejeitar(i){pendentes.splice(i,1);localStorage.setItem('anjosPendentes',JSON.stringify(pendentes));verPendentes();}
+function aprovar(i){
+let a=pendentes.splice(i,1)[0];
+ajudantes.push(a);
+localStorage.setItem('anjosAprovados',JSON.stringify(ajudantes));
+localStorage.setItem('anjosPendentes',JSON.stringify(pendentes));
+alert(a.nome+" foi confirmado como Anjo da rede!");
+verPendentes();
+}
+function rejeitar(i){
+pendentes.splice(i,1);
+localStorage.setItem('anjosPendentes',JSON.stringify(pendentes));
+verPendentes();
+}
 
-function modoLeve(){document.querySelector('.capa').style.display='none';document.body.style.background='white';alert('Modo leve ativado - gasta quase 0 megas 💜');}
-let clicks=0;document.addEventListener('click',()=>{clicks++;setTimeout(()=>clicks=0,2000);if(clicks>=3)window.location.href="https://www.google.com";});
-if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{});}
+let clicks=0;
+document.addEventListener('click',()=>{clicks++;setTimeout(()=>clicks=0,2000);if(clicks>=3)window.location.href="https://www.google.com";});
 </script>
 </body>
 </html>
